@@ -1,0 +1,102 @@
+---
+layout: default
+title: Lucia's site
+map: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.051757532621!2d13.42559231582439!3d52.4963026798097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fb539d595d1%3A0x181f398d8324a243!2sReichenberger+Str.%2C+10999+Berlin%2C+Germany!5e0!3m2!1sen!2sid!4v1493971491593"></iframe>
+skills:
+  - name: Product Design
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+    icon: snowflake-o
+  - name: Graphic Design
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+    icon: snowflake-o
+  - name: Web Development
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis.
+    icon: snowflake-o
+  - name: Video Edition
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+    icon: snowflake-o
+  - name: Photo Retouch
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+    icon: snowflake-o
+  - name: Event Organization
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis.
+    icon: snowflake-o
+experiences:
+  - icon: snowflake-o
+    job: Market Logic Software
+    role: Product Designer
+    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+  - icon: snowflake-o
+    job: Market Logic Software
+    role: Product Designer
+    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+  - icon: snowflake-o
+    job: Market Logic Software
+    role: Product Designer
+    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+
+---
+
+  <section class="header">
+    <h1>
+      <div>Lucia Martin</div>
+
+      Product Designer
+    </h1>
+    <i class="fa fa-globe" aria-hidden="true"></i><p>Berlin, Germany</p>
+  </section>
+
+  <!-- About me section -->
+  <section class="about">
+    <div class="box-about">
+      <h2>About me</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </section>
+
+
+<!-- SKILLS -->
+  <section class="skills grid">
+    <h2 class="col-12">My skills</h2>
+
+    {% for skill in page.skills %}
+
+    <div class="col-4">
+      <i class="fa fa-{{skill.icon}}" aria-hidden="true"></i>
+
+      <h3>{{skill.name}}</h3>
+      <p>{{skill.description}}</p>
+    </div>
+
+  {% endfor %}
+
+  </section>
+
+  <!-- Here goes the map section -->
+  <section class="map">
+
+    {{page.map}}
+
+  </section>
+
+  <!-- This is My Experience sections -->
+  <section>
+    <h2>My Experience</h2>
+
+    {% for experience in page.experiences %}
+
+    <div class="experience grid">
+    <div class="col-1">
+      <i class="fa fa-{{experience.icon}}" aria-hidden="true"></i>
+    </div>
+
+    <div class="col-3">
+      <h3>{{experience.job}}</h3>
+      <h4>{{experience.role}}</h4>
+    </div>
+
+    <div class="col-8">
+      <p>{{experience.description}}</p>
+    </div>
+{% endfor %}
+  </section>
