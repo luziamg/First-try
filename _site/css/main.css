@@ -8,12 +8,16 @@
 nav{
   background-color: #ffcdd2;
   padding:1%;
-  color: white;
 }
+
 nav a{
   text-decoration: none;
   padding: 2%;
   font-size: 18px;
+  color: white;
+}
+nav a:hover{
+  color: purple;
 }
 
 body{
@@ -47,7 +51,7 @@ p, a{
   font-size: 16px;
 }
 
-header, .about, .skills, .map, .experience, footer{
+header, .about, .skills, .map, footer{
   padding:2%;
   margin: 0;
 }
@@ -100,11 +104,28 @@ iframe{
   border: 0px;
 }
 
+.skills{
+  padding: 2%;
+}
+
+.skills i, h3, p{
+  padding: 2% 0;
+}
+
+.skills p{
+  text-align: justify;
+}
+
 /*EXPERIENCE*/
 .experience i{
   font-size: 24px;
   color: #3C3845;
 }
+
+.experience h2{
+  padding: 2%;
+}
+
 .experience h3, .experience h4, .experience p{
   text-align: left;
 }
@@ -112,20 +133,27 @@ iframe{
 
 /*FOOTER */
 footer{
-  background-color: grey;
+  background-color: #ffcdd2;
   align-content: center;
 }
 
-.iconsfoter{
+footer a{
+  text-decoration: none;
+}
+.icons-footer{
+  padding-top: 2%;
+}
 
+footer i.fa{
+  display: inline;
 }
 
   footer a i{
-  color: orange;
-  text-align: center;
-  text-decoration: none;
-  font-size: 60px !important;
+    color: orange;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px !important;
 }
 footer a i:hover{
-  color:green;
+  color:#993366;
 }

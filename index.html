@@ -80,23 +80,24 @@ experiences:
   </section>
 
   <!-- This is My Experience sections -->
-  <section>
+  <section class="experience">
     <h2>My Experience</h2>
 
     {% for experience in page.experiences %}
 
     <div class="experience grid">
-    <div class="col-1">
-      <i class="fa fa-{{experience.icon}}" aria-hidden="true"></i>
-    </div>
+      <div class="col-1-middle">
+        <i class="fa fa-{{experience.icon}}" aria-hidden="true"></i>
+      </div>
 
-    <div class="col-3">
-      <h3>{{experience.job}}</h3>
-      <h4>{{experience.role}}</h4>
-    </div>
+      <div class="col-3">
+        <h3>{{experience.job}}</h3>
+        <h4>{{experience.role}}</h4>
+      </div>
 
-    <div class="col-8">
-      <p>{{experience.description}}</p>
+      <div class="col-8">
+        <p>{{experience.description}}</p>
+      </div>
     </div>
 {% endfor %}
   </section>
